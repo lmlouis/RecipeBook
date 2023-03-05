@@ -9,7 +9,6 @@ export class HeaderComponent {
 
   onSelect(feature: string) {
     this.featureSelected.emit(feature)
-
   }
   collapsed : boolean = true
   constructor() {}

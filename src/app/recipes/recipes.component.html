@@ -1,14 +1,10 @@
 <h2>Recipe</h2> <hr>
 <div class="row">
   <div class="col-md-5">
-    <app-recipe-list (recipeWasSelected)="selectedRecipe = $event"></app-recipe-list>
+    <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail
-    [recipe]="selectedRecipe"
-    *ngIf="selectedRecipe; else infoText"></app-recipe-detail>
-    <ng-template #infoText>
-      <p>S'il vous plait selectionnez une recette</p>
-    </ng-template>
+    <router-outlet></router-outlet>
   </div>
 </div>
+

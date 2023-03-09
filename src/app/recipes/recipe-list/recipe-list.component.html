@@ -1,16 +1,16 @@
 <h3>Recipes List</h3> <hr>
 <div class="row">
   <div class="col-xs-12">
-    <button class="btn btn-success">New Recipe</button>
+    <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
   </div>
 </div>
 <hr>
 <div class="row">
   <div class="col-xs-12">
     <app-recipe-item
-    *ngFor="let recipeItem of recipes"
+    *ngFor="let recipeItem of recipes; let id = index"
     [recipe]="recipeItem"
-    (recipeSelected)="onRecipeSelected(recipeItem)"></app-recipe-item>
+    [index]="id"></app-recipe-item>
   </div>
 </div>
 
